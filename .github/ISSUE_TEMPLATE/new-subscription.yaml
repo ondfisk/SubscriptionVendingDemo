@@ -1,0 +1,37 @@
+---
+name: New subscription
+description: Create new subscription.
+title: "[New subscription]: "
+labels: ["new-subscription"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill in all the fields. We will not approve _corp_ subscriptions without a meeting.
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: Subscription owner
+      placeholder: ex. email@example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Environment
+      description: Which environment do you need the subscription in?
+      options:
+        - Corp
+        - Online (Default)
+        - Sandbox
+      default: 1
+    validations:
+      required: true
+  - type: input
+    id: costcenter
+    attributes:
+      label: Cost Center
+      description: Input cost center
