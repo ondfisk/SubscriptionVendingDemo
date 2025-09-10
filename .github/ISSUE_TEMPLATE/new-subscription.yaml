@@ -31,7 +31,7 @@ body:
     validations:
       required: true
   - type: input
-    id: costcenter
+    id: cost_center
     attributes:
       label: Cost Center
       description: Input cost center

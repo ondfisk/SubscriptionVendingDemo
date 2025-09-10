@@ -1,0 +1,15 @@
+---
+name: New Subscription
+
+on:
+	issues:
+		types:
+      - opened
+
+jobs:
+  extract-form-information:
+    name: Extract form information
+    runs-on: ubuntu-latest
+		steps:
+			- name: Hello, World!
+        run: echo "Hello, World!"
