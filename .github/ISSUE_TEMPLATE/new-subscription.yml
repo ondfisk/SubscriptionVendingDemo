@@ -20,7 +20,7 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: landing_zone
     attributes:
       label: Landing Zone
       description: Choose a landing zone
