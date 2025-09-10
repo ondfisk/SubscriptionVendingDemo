@@ -4,8 +4,6 @@ description: Create new subscription
 title: New subscription request
 labels:
   - new subscription
-assignees:
-  - octocat
 body:
   - type: markdown
     attributes:

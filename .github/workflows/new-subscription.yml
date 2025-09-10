@@ -9,7 +9,7 @@ on:
 jobs:
   parse-issue:
     runs-on: ubuntu-latest
-    if: contains(github.event.labels.*.name, 'approved')
+    if: contains(github.event.issue.labels.*.name, 'approved')
     steps:
       - name: Checkout
         uses: actions/checkout@v5.0.0
