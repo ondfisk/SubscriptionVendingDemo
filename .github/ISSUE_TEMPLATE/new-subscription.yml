@@ -22,12 +22,12 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: Environment
-      description: Which environment do you need the subscription in?
+      label: Landing Zone
+      description: Choose a landing zone
       options:
-        - Corp (Legacy lift and shift only)
-        - Online (Recommended for production)
-        - Sandbox (Playground)
+        - corp
+        - online
+        - sandbox
       default: 1
     validations:
       required: true
@@ -35,4 +35,4 @@ body:
     id: cost_center
     attributes:
       label: Cost Center
-      description: Input cost center
+      description: Enter your cost center

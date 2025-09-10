@@ -26,4 +26,12 @@ jobs:
 
       - name: Output the Parsed Issue
         id: output
-        run: echo ${{ steps.parse.outputs.json }}
+        run: |
+          echo "Owner: $OWNER"
+          echo "Landing zone: $LANDING_ZONE"
+          echo "Cost center: $COST_CENTER"
+
+        env:
+          OWNER: ${{ steps.parse.outputs.parsed_owner }}
+          LANDING_ZONE: ${{ steps.parse.outputs.parsed_landing_zone }}
+          COST_CENTER: ${{ steps.parse.outputs.parsed_cost_center }}
