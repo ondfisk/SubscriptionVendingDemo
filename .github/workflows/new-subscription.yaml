@@ -6,12 +6,19 @@ on:
     types:
       - opened
       - labeled
+      - edited
 
 jobs:
   label_issue:
     runs-on: ubuntu-latest
     steps:
-      - env:
-          ISSUE_URL: ${{ github.event.issue.html_url }}
-        run: |
-          echo $ISSUE_URL
+      - name: Parse Issue
+        id: parse
+        uses: issue-ops/parser@v4.2.0
+        with:
+          body: ${{ github.event.issue.body }}
+          issue-form-template: new-subscription.yml
+
+      - name: Output the Parsed Issue
+        id: output
+        run: echo ${{ steps.parse.outputs.json }}

@@ -3,7 +3,7 @@ name: New subscription
 description: Create new subscription
 title: New subscription request
 labels:
-  - new-subscription
+  - new subscription
 assignees:
   - octocat
 body:
