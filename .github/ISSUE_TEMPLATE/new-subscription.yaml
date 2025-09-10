@@ -24,9 +24,9 @@ body:
       label: Environment
       description: Which environment do you need the subscription in?
       options:
-        - Corp
-        - Online (Default)
-        - Sandbox
+        - Corp (Only for legacy lift and shift scenarios)
+        - Online (Recommended for production)
+        - Sandbox (Playground. Free roam)
       default: 1
     validations:
       required: true
