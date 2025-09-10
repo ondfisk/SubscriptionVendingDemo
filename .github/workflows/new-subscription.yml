@@ -17,7 +17,7 @@ jobs:
         uses: issue-ops/parser@v4.2.0
         with:
           body: ${{ github.event.issue.body }}
-          issue-form-template: new-subscription.yaml
+          issue-form-template: new-subscription.yml
 
       - name: Output the Parsed Issue
         id: output
