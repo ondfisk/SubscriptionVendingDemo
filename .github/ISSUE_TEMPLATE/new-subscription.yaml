@@ -2,7 +2,8 @@
 name: New subscription
 description: Create new subscription.
 title: "[New subscription]: "
-labels: ["new-subscription"]
+labels:
+  - new-subscription
 assignees:
   - octocat
 body:
@@ -24,9 +25,9 @@ body:
       label: Environment
       description: Which environment do you need the subscription in?
       options:
-        - Corp (Only for legacy lift and shift scenarios)
+        - Corp (Legacy lift and shift only)
         - Online (Recommended for production)
-        - Sandbox (Playground. Free roam)
+        - Sandbox (Playground)
       default: 1
     validations:
       required: true

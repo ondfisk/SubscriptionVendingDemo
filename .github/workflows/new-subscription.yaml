@@ -2,14 +2,15 @@
 name: New Subscription
 
 on:
-	issues:
-		types:
+  issues:
+    types:
       - opened
 
 jobs:
-  extract-form-information:
-    name: Extract form information
+  label_issue:
     runs-on: ubuntu-latest
-		steps:
-			- name: Hello, World!
-        run: echo "Hello, World!"
+    steps:
+      - env:
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: |
+          echo $ISSUE_URL
